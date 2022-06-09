@@ -1,14 +1,15 @@
 import ConditionalApp from "./ConditionalApp";
 import CounterApp from "./CounterApp";
+import ErrorApp from "./ErrorApp";
 
 function App() {
   return (
-      <div> 
-        <h1>Hello World</h1>
-        {/* <CounterApp/> */}
-        <ConditionalApp/>
+    <div>
+        {/* <CounterApp/>  */}
+        {/* <ConditionalApp/> */}
+        <ErrorApp/>
       </div>
-  );
+  )
 }
 
 export default App;
