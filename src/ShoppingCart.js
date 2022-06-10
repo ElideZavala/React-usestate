@@ -30,12 +30,11 @@ const ShoppingCart = () => {
   }
 
   const updateProduct = (editProduct) => {
-	   const changedCart = cart.map(product => {
+	   const changedCart = cart.map(product => ( 
 			product.id === editProduct.id
 			? editProduct
 			: product
-		})
-
+		))
 	   setCart(changedCart)
   }
 
@@ -45,20 +44,25 @@ const ShoppingCart = () => {
 			Add
 		</button>
 
-		<button onClick={() => updateProduct({ id: 1, title: "Edit titulo", description: "Edit Desc"})}> 
-			Update
-		</button>
-
       {cart.map((product) => (
         <div key={product.id}>
           <h1>
             {product.id} {product.title}
           </h1>
           <p>{product.description}</p>
-          {/* Creamos un botton par cada iteracion vinculado con el id */}
           <button onClick={() => deleteProduct(product.id)}>Delete</button>
+          <button 
+			 	onClick={() => updateProduct({ id: product.id, title: "Edit titulo", description: "Edit Desc"})}
+			 >
+				Update
+			 </button>
         </div>
       ))}
+
+		<br/> 
+		<pre>
+			{JSON.stringify(cart, null, 3)}
+		</pre>
     </div>
   )
 }
