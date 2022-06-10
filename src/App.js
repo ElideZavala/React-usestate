@@ -2,6 +2,7 @@ import ConditionalApp from "./ConditionalApp";
 import CounterApp from "./CounterApp";
 import ErrorApp from "./ErrorApp";
 import ProductApp from "./ProductApp";
+import ShoppingCart from "./ShoppingCart";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
         {/* <CounterApp/>  */}
         {/* <ConditionalApp/> */}
         {/* <ErrorApp/> */}
-        <ProductApp/>
+        {/* <ProductApp/> */}
+        <ShoppingCart/>
       </div>
   )
 }
